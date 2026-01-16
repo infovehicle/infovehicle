@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/gen"
+        android:title="General"
+
+        ></item>
+
+    <item
+        android:id="@+id/faq"
+        android:title="FAQs"
+
+        ></item>
+
+    <item
+        android:id="@+id/abt"
+        android:title="About Us"
+
+        ></item>
+
+
+</menu>
+   

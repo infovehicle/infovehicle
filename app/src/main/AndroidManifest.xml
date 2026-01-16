@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="32"
+
+    android:versionName="5.0.3" >
+
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission-sdk-23 android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <uses-permission-sdk-23 android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission-sdk-23 android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission-sdk-23 android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+
+    <application
+        android:name="com.info.vehicle.InfoVehicle"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat"
+        android:usesCleartextTraffic="true"
+         >
+        <activity
+            android:name="com.info.vehicle.SplashActivity"
+            android:label="@string/app_name"
+            android:exported="true"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name="com.info.vehicle.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.MailActivity"
+            android:label="@string/title_activity_mail"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.GeneralActivity"
+            android:label="@string/title_activity_general"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.InfoActivity"
+            android:label="@string/title_activity_info"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.VerActivity"
+            android:label="@string/title_activity_ver"
+             android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.info.vehicle.FAQActivity"
+            android:label="@string/title_activity_faq"
+             android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

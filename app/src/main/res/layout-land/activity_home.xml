@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+     android:background="@drawable/border"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+      
+<RelativeLayout android:id="@+id/l1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Select State "
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+   
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+           android:layout_marginRight="80dp"
+           android:layout_marginLeft="30dp"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="80dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="22dp"
+            android:background="@drawable/ractangle_new"
+            android:text="Search"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:layout_marginTop="38dp"
+        android:textStyle="bold"
+        android:textColor="#848484"
+        android:text="Enter only the NUMBER PLATE details of any vehicle on the next page." />
+
+    <com.hmflgg.bqgcdf186115.AdView
+        xmlns:ap="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/myAdView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        ap:banner_type="inappad"
+        ap:canShowMR="true"
+        ap:placementType="string"
+        ap:test_mode="false"
+        app:animation="fade" >
+    </com.hmflgg.bqgcdf186115.AdView>
+          
+</LinearLayout>

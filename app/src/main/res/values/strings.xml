@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Info Vehicle</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_home">Info Vehicle</string>
+    <string name="title_activity_mail">Mail Us</string>
+    <string name="title_activity_web_view">Info Vehicle</string>
+    <string name="title_activity_general">About Us</string>
+    <string name="title_activity_info">About Application</string>
+    <string name="title_activity_ver">Application Version</string>
+    <string name="title_activity_faq">FAQs</string>
+  <!-- <string name="add_unique_id">ca-app-pub-3940256099942544/6300978111</string>-->
+   <string name="add_unique_id">ca-app-pub-5468817073944283/9590626433</string>
+
+</resources>
