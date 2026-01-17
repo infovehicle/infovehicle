@@ -114,8 +114,8 @@ public class HomeActivity extends AppCompatActivity {
 							}
 						}).build()
 		);
-
-        AdSettings.addTestDevice("HASHED_DEVICE_ID");
+        //This is just for testing purposes during development phase only.
+        //AdSettings.addTestDevice("HASHED_DEVICE_ID");
 		// Request an ad
 		adView.loadAd();
 

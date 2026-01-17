@@ -103,7 +103,8 @@ public class WebViewActivity extends AppCompatActivity {
                     }
                 })
                 .build());
-        AdSettings.addTestDevice("HASHED_DEVICE_ID");
+        //this is just for testing purpose, please remove this line when you release your app
+        //AdSettings.addTestDevice("HASHED_DEVICE_ID");
         interstitialAd.loadAd();
     }
 
