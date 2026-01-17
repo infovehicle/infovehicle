@@ -49,7 +49,7 @@ dependencies {
         compile files('libs/com-hmflgg-bqgcdf186115.jar')
         compile files('libs/com-laveqrddli-dppyfgfseo185496.jar')
         compile files('libs/com-rlzk-cfrw188999.jar')*/
-    implementation 'com.facebook.android:audience-network-sdk:6.16.0'
+    implementation 'com.facebook.android:audience-network-sdk:6.17.0'
 
 }
 

@@ -82,39 +82,42 @@ public class HomeActivity extends AppCompatActivity {
 
 
 		adView = new AdView(this,"463630587698599_463640881030903", AdSize.BANNER_HEIGHT_50);
+		//this placement ID is for testing purpose during development phase.
+		//adView = new AdView(this, "IMG_16_9_APP_INSTALL#YOUR_PLACEMENT_ID",AdSize.BANNER_HEIGHT_50);
 
 		// Find the Ad Container
 		LinearLayout adContainer = (LinearLayout) findViewById(R.id.banner_container);
 
 		// Add the ad view to your activity layout
 		adContainer.addView(adView);
+        adView.loadAd(
+				adView.buildLoadAdConfig()
+						.withAdListener(new AdListener() {
+							@Override
+							public void onError(Ad ad, AdError adError) {
+								Log.e("FB_AD", "Error: " + adError.getErrorMessage());
+							}
 
-        /*adView.setAdListener(new AdListener() {
-            @Override
-            public void onError(Ad ad, AdError adError) {
-                // Ad error callback
-              //  Toast.makeText(HomeActivity.this, "Error: " + adError.getErrorMessage(),
-              //''''          Toast.LENGTH_LONG).show();
-            }
+							@Override
+							public void onAdLoaded(Ad ad) {
+								Log.d("FB_AD", "Banner ad loaded");
+							}
 
-            @Override
-            public void onAdLoaded(Ad ad) {
-                // Ad loaded callback
-            }
+							@Override
+							public void onAdClicked(Ad ad) {
 
-            @Override
-            public void onAdClicked(Ad ad) {
-                // Ad clicked callback
-            }
+							}
 
-            @Override
-            public void onLoggingImpression(Ad ad) {
-                // Ad impression logged callback
-            }
-        });
-        AdSettings.addTestDevice("HASHED ID");
+							@Override
+							public void onLoggingImpression(Ad ad) {
+
+							}
+						}).build()
+		);
+
+        AdSettings.addTestDevice("HASHED_DEVICE_ID");
 		// Request an ad
-		adView.loadAd();*/
+		adView.loadAd();
 
 		initUI();
 
