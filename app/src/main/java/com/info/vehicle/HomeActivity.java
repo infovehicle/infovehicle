@@ -270,8 +270,8 @@ public class HomeActivity extends AppCompatActivity {
 	private SpinnerAdapter typeSpinnerAdapter = new BaseAdapter() {
 
 		
-		private String[] data = { "All INDIA VEHICLES", "Andhra Pradesh", "Chattisgarh", "Chandigarh", "Madhya Pradesh", "Odisha", "Telangana", "Tripura" };
-		private int count = 8;
+		private String[] data = { "All INDIA VEHICLES", "Madhya Pradesh"/*,"Andhra Pradesh", "Chattisgarh", "Chandigarh", "Odisha", "Telangana", "Tripura"*/ };
+		private int count = data.length;
 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {

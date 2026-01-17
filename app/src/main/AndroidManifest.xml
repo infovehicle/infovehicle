@@ -41,32 +41,32 @@
         <activity
             android:name="com.info.vehicle.MailActivity"
             android:label="@string/title_activity_mail"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.info.vehicle.WebViewActivity"
             android:label="@string/title_activity_web_view"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.info.vehicle.GeneralActivity"
             android:label="@string/title_activity_general"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.info.vehicle.InfoActivity"
             android:label="@string/title_activity_info"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.info.vehicle.VerActivity"
             android:label="@string/title_activity_ver"
-             android:screenOrientation="landscape" >
+             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="com.info.vehicle.FAQActivity"
             android:label="@string/title_activity_faq"
-             android:screenOrientation="landscape" >
+             android:screenOrientation="portrait" >
         </activity>
     </application>
 
