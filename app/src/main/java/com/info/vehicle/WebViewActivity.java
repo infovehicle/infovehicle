@@ -50,96 +50,61 @@ public class WebViewActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "YOU ARE NOT CONNECTED TO NETWORK...Try Again", Toast.LENGTH_LONG).show();
             finish();
         }
-       // initFullscreenAd();
+        initFullscreenAd();
     }
 
     private void initFullscreenAd() {
-     /*   mInterstitialAd = new InterstitialAd(this);
-       // mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-        mInterstitialAd.setAdUnitId("ca-app-pub-5468817073944283/1033479563");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
-        mInterstitialAd.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                // Code to be executed when an ad finishes loading.
-            }
-
-            @Override
-            public void onAdFailedToLoad(int errorCode) {
-                // Code to be executed when an ad request fails.
-            }
-
-            @Override
-            public void onAdOpened() {
-                // Code to be executed when the ad is displayed.
-            }
-
-            @Override
-            public void onAdLeftApplication() {
-                // Code to be executed when the user has left the app.
-            }
-
-            @Override
-            public void onAdClosed() {
-                // Code to be executed when when the interstitial ad is closed.
-                starthomeActivity();
-                finish();
-            }
-        });*/
 
         interstitialAd = new InterstitialAd(this, "463630587698599_463647291030262");
-        // Set listeners for the Interstitial Ad
-       /* interstitialAd.setAdListener(new InterstitialAdListener() {
-            @Override
-            public void onInterstitialDisplayed(Ad ad) {
-                // Interstitial ad displayed callback
-                Log.e(TAG, "Interstitial ad displayed.");
-                showToast("Interstitial ad displayed");
+        //this placement ID is for testing purpose during development phase.
+        //interstitialAd = new InterstitialAd(this, "VID_HD_16_9_46S_APP_INSTALL#YOUR_PLACEMENT_ID");
+        interstitialAd.loadAd(interstitialAd.buildLoadAdConfig()
+                .withAdListener(new InterstitialAdListener() {
+                    @Override
+                    public void onInterstitialDisplayed(Ad ad) {
+                        // Interstitial ad displayed callback
+                        Log.e(TAG, "Interstitial ad displayed.");
+                    }
 
-            }
+                    @Override
+                    public void onInterstitialDismissed(Ad ad) {
+                        // Interstitial dismissed callback
+                        Log.e(TAG, "Interstitial ad dismissed.");
+                        starthomeActivity();
+                        finish();
+                    }
 
-            @Override
-            public void onInterstitialDismissed(Ad ad) {
-                // Interstitial dismissed callback
-                Log.e(TAG, "Interstitial ad dismissed.");
-                showToast("Interstitial ad dismissed.");
-                isAdLoaded=false;
-                starthomeActivity();
-                finish();
-            }
+                    @Override
+                    public void onError(Ad ad, AdError adError) {
+                        // Ad error callback
+                        Log.e(TAG, "Interstitial ad failed to load: " + adError.getErrorMessage());
+                        showToast(adError.getErrorMessage());
+                        starthomeActivity();
+                        finish();
+                    }
 
-            @Override
-            public void onError(Ad ad, AdError adError) {
-                // Ad error callback
-                Log.e(TAG, "Interstitial ad failed to load: " + adError.getErrorMessage());
-                showToast("Interstitial ad failed to load:");
-            }
+                    @Override
+                    public void onAdLoaded(Ad ad) {
+                        // Interstitial ad is loaded and ready to be displayed
+                        Log.d(TAG, "Interstitial ad is loaded and ready to be displayed!");
+                        isAdLoaded = true;
+                    }
 
-            @Override
-            public void onAdLoaded(Ad ad) {
-                // Interstitial ad is loaded and ready to be displayed
-                Log.d(TAG, "Interstitial ad is loaded and ready to be displayed!");
-                showToast("Interstitial ad is loaded and ready to be displayed!");
-                // Show the ad
-               //interstitialAd.show();
-                isAdLoaded=true;
-            }
+                    @Override
+                    public void onAdClicked(Ad ad) {
+                        // Ad clicked callback
+                        Log.d(TAG, "Interstitial ad clicked!");
+                    }
 
-            @Override
-            public void onAdClicked(Ad ad) {
-                // Ad clicked callback
-                Log.d(TAG, "Interstitial ad clicked!");
-                showToast("Interstitial ad clicked!");
-            }
-
-            @Override
-            public void onLoggingImpression(Ad ad) {
-                // Ad impression logged callback
-                Log.d(TAG, "Interstitial ad impression logged!");
-                showToast("Interstitial ad impression logged!!");
-            }
-        });
-        interstitialAd.loadAd();*/
+                    @Override
+                    public void onLoggingImpression(Ad ad) {
+                        // Ad impression logged callback
+                        Log.d(TAG, "Interstitial ad impression logged!");
+                    }
+                })
+                .build());
+        AdSettings.addTestDevice("HASHED_DEVICE_ID");
+        interstitialAd.loadAd();
     }
 
 
