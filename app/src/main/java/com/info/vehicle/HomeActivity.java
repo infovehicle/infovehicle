@@ -293,7 +293,8 @@ public class HomeActivity extends AppCompatActivity {
 				}
 				if(tct.equals("All INDIA VEHICLES"))
 				{
-					urls="https://parivahan.gov.in/rcdlstatus/?pur_cd=102";
+					//urls="https://parivahan.gov.in/rcdlstatus/?pur_cd=102";
+					urls="https://vahan.parivahan.gov.in/nrservices/faces/user/citizen/citizenlogin.xhtml";
 				}
 				//if(tct.equals("TRACE VEHICLE LOCATION (NEW)"))
 				//{
